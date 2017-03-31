@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Music{% endblock %}
+
+{% block head %}
+<link href="static/music/music.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<form id='upload-form' method="POST">
+	<fieldset>
+		<div class="container">
+			<label>File:</label>
+			<input type="file" id="file" name="file" accept="audio/*" required>
+		</div><!-- /.container -->
+		<div class="container">
+			<label>Artist:</label>
+			<input type="text" id="artist" required>
+		</div><!-- /.container -->
+		<div class="container">
+			<label>Album:</label>
+			<input type="text" id="album">
+		</div><!-- /.container -->
+		<div class="container">
+			<label>Title:</label>
+			<input type="text" id="title" required>
+		</div><!-- /.container -->
+		<div class="container">
+			<button type="submit">Upload!</button>
+		</div><!-- /.container -->
+	</fieldset>
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.4.0/jsmediatags.min.js"
+	integrity="sha256-EsI1k5PvphOwlnbwfsTtAVSDKgHSkGOmrEjxMGFTBG8="
+	crossorigin="anonymous">
+</script>
+<script src="static/music/music.js"></script>
+{% endblock %}
+{# vim: set noet sts=4 sw=4 ts=4 ft=htmldjango : #}

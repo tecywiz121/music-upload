@@ -1,0 +1,25 @@
+#upload-form {
+    max-width: 25rem;
+}
+
+label {
+    float: left;
+}
+
+input {
+    float: right;
+}
+
+.container {
+    width: 100%;
+    float: left;
+}
+
+.container + .container {
+    margin-top: 0.5rem;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+}
